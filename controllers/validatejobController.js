@@ -1,9 +1,9 @@
-const jobsModel = require('../models/jobmodel')
+const jobModel = require('../models/jobmodel')
 
 const getJobID = async(request, response) => {
     const {jobID} = request.body
     try{
-        const jobToBeEdited = await jobsModel.findOne({jobID:jobID})
+        const jobToBeEdited = await jobModel.findOne({jobID:jobID})
         response.status(200).json(jobToBeEdited)
     }
     catch(error)
