@@ -10,7 +10,7 @@ const PORT =3500;
 app.use(cors());
 app.use(express.json())
  //connect to mongodb database 
- mongoose.connect('mongodb://localhost/jobDB')
+ mongoose.connect('mongodb://127.0.0.1/jobDB')
  const db =mongoose.connection
  db.on('error',(err)=>{
     console.log(err)
